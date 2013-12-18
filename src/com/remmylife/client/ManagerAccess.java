@@ -153,7 +153,7 @@ import com.remmylife.diary.*;
         	public boolean deleteFromWeibo(Diary diary, String accessToken){
             		return  callMethodInOutPrim("deleteFromWeibo",
                 		 "diary", diary, true,
-                    		"accessToken", accessToken, false);
+                    		 "accessToken", accessToken, false);
         	}
     
         	public boolean shareToWeibo(Diary diary, String accessToken){
