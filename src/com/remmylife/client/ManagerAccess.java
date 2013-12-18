@@ -29,7 +29,7 @@ import com.remmylife.diary.*;
 			this.TARGET_NAME_SPACE= target_name_space;
 		}
 		
-		// user µÄ²Ù×÷
+		// user ï¿½Ä²ï¿½ï¿½ï¿½
 		public boolean loginByName(String userName, String password){
 			return callMethodInOutPrim("loginByName", "userName", userName, false, "password", password, false);
 			
@@ -50,7 +50,7 @@ import com.remmylife.diary.*;
 		
 		}
 		
-		// diary µÄ²Ù×÷
+		// diary ï¿½Ä²ï¿½ï¿½ï¿½
 		
 		public boolean deleteDiary(Diary diary){
 			return callMethodInOutPrim("deleteDiary", "diary",diary, true);
@@ -148,6 +148,19 @@ import com.remmylife.diary.*;
 					"own",own,false);
 			
 		}
+		
+		 // Weibo
+        	public boolean deleteFromWeibo(Diary diary, String accessToken){
+            		return  callMethodInOutPrim("deleteFromWeibo",
+                		 "diary", diary, true,
+                    		"accessToken", accessToken, false);
+        	}
+    
+        	public boolean shareToWeibo(Diary diary, String accessToken){
+            		return callMethodInOutPrim("shareToWeibo",
+                    		"diary", diary, true,
+                    		"accessToken", accessToken, false);
+        	}
 		
 		
 		private void callMethodIn(String method, Object... args ) {
